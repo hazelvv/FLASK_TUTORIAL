@@ -59,7 +59,7 @@ def index():
 
 
 
-
+#READ
 @app.route('/read/<int:id>/')
 def read(id):
     print(type(id))
@@ -76,7 +76,7 @@ def read(id):
 
 
 
-
+#CREATE
 @app.route('/create/', methods=['GET', 'POST'])
 def create():
     print('request.mothod', request.method)
@@ -101,7 +101,7 @@ def create():
         return redirect(url)
     
 
-#업데이트
+#UPDATE
 @app.route('/update/<int:id>/', methods=['GET', 'POST'])
 def update(id):
     print('request.mothod', request.method)
@@ -139,7 +139,7 @@ def update(id):
         return redirect(url)
     
 
-
+#DELETE
 @app.route('/delete/<int:id>/', methods=['POST'])
 def delete(id):
     for topic in topics:
